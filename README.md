@@ -1,53 +1,31 @@
-# Computing 2 Coursework Submission.
-**CID**: [YOUR CID]
 
-This is the submission template for your Computing 2 Applications coursework submission.
+# Emma: A WebApp for Controlling a Mechanical Tentacle
+Emma uses a JavaScript-based WebApp that allows users to control a mechanical tentacle called Emma. The tentacle is made up of two segments, each of which is controlled by two motors, giving the tentacle a total of four degrees of freedom.
 
-## Checklist
-### Install dependencies locally
-This template relies on a a few packages from the Node Package Manager, npm.
-To install them run the following commands in the terminal.
-```properties
-npm install
-npm install --prefix ./web-app/common
-```
-These won't be uploaded to your repository because of the `.gitignore`.
-I'll run the same commands when I download your repos.
+The code for Emma uses an API to receive a video input from a local network, which is then processed and post-processed using handtrack.js, a machine learning library for detecting hand gestures in video. The processed video is used to generate a JSON document containing values for the tentacle's mood and status, based on the user's hand gestures and the location of their face relative to the arm.
 
-### Game Module – API
-*You will produce an API specification, i.e. a list of function names and their signatures, for a Javascript module that represents the state of your game and the operations you can perform on it that advances the game or provides information.*
+These values are then sent back over the network to an ESP, which deserializes the data and processes it, sending the resulting data over serial to two individual Arduinos. The first Arduino uses fastled to control the lights on the tentacle, depending on its emotional state, while the second Arduino uses multistepper and accelstepper to control the tentacle's four motors with acceleration and asynchronous behavior. This allows the tentacle to be interrupted at any time, allowing for precise and responsive control.
 
-- [ ] Include a `.js ` module file in `/web-app/common` containing the API using `jsdoc`.
-- [ ] Update `/jsdoc.json` to point to this module in `.source.include` (line 7)
-- [ ] Compile jsdoc using the run configuration `Generate Docs`
-- [ ] Check the generated docs have compiled correctly.
+## adjusting the tenticle
 
-### Game Module – Implementation
-*You will implement, in Javascript, the module you specified above. Such that your game can be simulated in code, e.g. in the debug console.*
+In addition to its core functionality, Emma also offers a number of advanced features. For example, the WebApp includes an interface for manually adjusting the tentacle's movement, allowing users to fine-tune its behavior. This can be useful for tasks such as calibrating the tentacle's position or adjusting its speed and acceleration.
+Another useful feature of Emma is its ability to track and respond to multiple users simultaneously. This allows multiple people to control the tentacle at the same time, either independently or in collaboration. This can create a fun and engaging group experience, and can also be useful for tasks such as manipulating objects or performing complex movements.
 
-- [ ] The file above should be fully implemented.
 
-### Unit Tests – Specification
-*For the Game module API you have produced, write a set of unit tests descriptions that specify the expected behaviour of one aspect of your API, e.g. you might pick the win condition, or how the state changes when a move is made.*
 
-- [ ] Write unit test definitions in `/web-app/tests`.
-- [ ] Check the headings appear in the Testing sidebar.
+Finally, Emma's use of machine learning and AI technologies allows it to continually improve its performance over time. As the WebApp processes more video data, it can learn to more accurately detect hand gestures and facial expressions, resulting in more responsive and intuitive control of the tentacle.
+Overall, Emma is a powerful and sophisticated tool for controlling a mechanical tentacle, offering users a unique and engaging experience. Whether you're using it for fun, experimentation, or practical applications, Emma is sure to impress.
 
-### Unit Tests – Implementation
-*Implement in code the unit tests specified above.*
+## The Back End of the tenticle
 
-- [ ] Implement the tests above.
+In addition to its user-facing features, Emma also includes a powerful backend that powers its machine learning capabilities. This backend uses a range of technologies and algorithms to accurately interpret the video data received from the API and generate the JSON documents containing the tentacle's mood and status.
+For example, Emma uses deep learning neural networks to analyze the video data and detect hand gestures and facial expressions. These neural networks have been trained on large datasets of images and videos, allowing them to accurately recognize a wide range of hand gestures and facial expressions.
+The JSON documents generated by Emma's backend are then sent over the network to the ESP, which processes the data and sends it to the Arduinos controlling the tentacle. The Arduinos use this data to determine the appropriate movements and behaviors for the tentacle, resulting in responsive and intuitive control.
+Overall, Emma's backend is a crucial component of the WebApp, allowing it to deliver its powerful machine learning capabilities to users. With its sophisticated algorithms and technologies, Emma's backend is able to provide users with a truly unique and engaging experience.
 
-### Web Application
-*Produce a web application that allows a user to interface with your game module.*
+# Getting Started
 
-- Implement in `/web-app/browser`
-  - [ ] `index.html`
-  - [ ] `default.css`
-  - [ ] `main.js`
-  - [ ] Any other files you need to include.
+- To get started with Emma, you'll need to set up the necessary hardware and software. This includes the mechanical tentacle itself, along with the necessary Arduinos, motors, and other hardware components. You'll also need to install the WebApp on a computer or other device that's connected to the same local network as the tentacle.
+- Once everything is set up, you can start using Emma by launching the WebApp and following the on-screen instructions. This will typically involve pointing your device's camera at the tentacle and using your hands to control its movement. The WebApp will use machine learning to interpret your hand gestures and facial expressions, and will translate these into movements for the tentacle.
+- As you use Emma, you may want to adjust its settings or tweak its behavior. This can be done through the WebApp's interface, which offers a range of options for customizing the tentacle's movements and other behaviors. For example, you can adjust the tentacle's speed, acceleration, and other parameters to suit your preferences or the specific task at hand.
 
-### Finally
-- [ ] Push to GitHub.
-- [ ] Sync the changes.
-- [ ] Check submission on GitHub website.
