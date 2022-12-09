@@ -106,3 +106,20 @@ Overall, Emma's backend is a crucial component of the WebApp, allowing it to del
     - Web apps can be difficult to optimize for performance and reliability, especially when running on low-power devices such as the ESP32. This can require careful design and optimization of the web app and its underlying infrastructure to ensure smooth and reliable operation.
 
     Overall, creating a web app to do the processing on the Emma Tentacle can provide many benefits, but it can also be challenging due to the complexity and requirements of web development and networking, as well as the need for security and performance optimization.
+    
+    
+    
+    
+    # Sources
+    ## Libaries
+     - ESP
+     - Adafruit
+     - Wifi.h
+     - MultiStepper
+     - AccellStepper
+     - OPENAI
+     - Github Coppilot
+     - Handtrack.js
+    
+    ## Example code
+    - Fourier.space webserver 
