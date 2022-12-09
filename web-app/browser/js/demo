@@ -1,0 +1,64 @@
+import React from 'react';
+import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+
+const App = () => {
+  const sendWebRequest = (state) => {
+    // Set up the URL with the state and x-axis and y-axis values
+    const url = `172.20.10.3/update?state=${state}&x-axis=1028&y-axis=1029`;
+    // Send the web request
+    fetch(url);
+  };
+
+  return (
+    <View style={styles.container}>
+      {/* Button for happy emotion */}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => sendWebRequest(1)}
+      >
+        <Text style={styles.buttonText}>Happy</Text>
+      </TouchableOpacity>
+      {/* Button for afraid emotion */}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => sendWebRequest(2)}
+      >
+        <Text style={styles.buttonText}>Afraid</Text>
+      </TouchableOpacity>
+      {/* Button for angry emotion */}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => sendWebRequest(3)}
+      >
+        <Text style={styles.buttonText}>Angry</Text>
+      </TouchableOpacity>
+      {/* Button for existestential rage emotion */}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => sendWebRequest(4)}
+      >
+        <Text style={styles.buttonText}>Existential Rage</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    backgroundColor: '#EEEEEE',
+    padding: 20,
+    borderRadius: 5,
+    margin: 10,
+    elevation: 2,
+  },
+  buttonText: {
+    fontSize: 18,
+  },
+});
+
+export default App;
