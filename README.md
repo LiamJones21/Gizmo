@@ -30,10 +30,22 @@ Overall, Emma's backend is a crucial component of the WebApp, allowing it to del
 - As you use Emma, you may want to adjust its settings or tweak its behavior. This can be done through the WebApp's interface, which offers a range of options for customizing the tentacle's movements and other behaviors. For example, you can adjust the tentacle's speed, acceleration, and other parameters to suit your preferences or the specific task at hand.
 
 
-##How to use the webapp
+## How to use the webapp
+### Setting up
+
+<img width="1431" alt="image" src="https://user-images.githubusercontent.com/92636294/206808662-05b6b3ef-efd1-48b0-8f36-56ca57a81e74.png">
+
 <img width="1217" alt="image" src="https://user-images.githubusercontent.com/92636294/206807854-56e47ee8-4264-4079-a11c-403b0acd2101.png">
+
+
+### GUI Meanings
 <img width="1280" alt="image" src="https://user-images.githubusercontent.com/92636294/206808146-78895b1b-c9ee-459a-8864-65bc11f05ccd.png">
+
+### Buttons
 <img width="520" alt="image" src="https://user-images.githubusercontent.com/92636294/206808250-4ac8ef7a-08c3-4374-86b6-45a4f0ef6ee0.png">
+
+### Console Logs
+<img width="1194" alt="image" src="https://user-images.githubusercontent.com/92636294/206808483-a38a244e-d0c6-4968-b06e-9a863c329e39.png">
 
 <img width="1864" alt="image" src="https://user-images.githubusercontent.com/92636294/206807668-fd33dd0f-c7ba-47db-9c8d-ac70a3a97554.png">
 
