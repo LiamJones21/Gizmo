@@ -1,5 +1,5 @@
 /*********
-  Rui Santos
+  Useing a bases code from Rui Santos implemented our functions and our requirements
   Complete project details at https://RandomNerdTutorials.com/esp32-async-web-server-espasyncwebserver-library/
   The above copyright notice and this permission notice shall be included in all
   copies or substantial portions of the Software.
@@ -149,8 +149,11 @@ void setup(){
       inputMessage1 = "No message sent";
       inputMessage2 = "No message sent";
     };
+    //deserialise the json document
   Serial.println("{\"state\":\""+inputMessage1+"\",\"x-axis\":\""+inputMessage2+"\",\"y-axis\":\""+inputMessage3+"\"}");
  request->send(200, "text/plain", "OK");
+    
+    //send the deserialised document to the screen
     Heltec.display->clear();
     Heltec.display->drawString(0, 0, "Arm State:" + String(inputMessage1));
     Heltec.display->drawString(0, 15, "x-Axis:"+ String(inputMessage2));
