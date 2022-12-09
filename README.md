@@ -29,6 +29,15 @@ Overall, Emma's backend is a crucial component of the WebApp, allowing it to del
 - Once everything is set up, you can start using Emma by launching the WebApp and following the on-screen instructions. This will typically involve pointing your device's camera at the tentacle and using your hands to control its movement. The WebApp will use machine learning to interpret your hand gestures and facial expressions, and will translate these into movements for the tentacle.
 - As you use Emma, you may want to adjust its settings or tweak its behavior. This can be done through the WebApp's interface, which offers a range of options for customizing the tentacle's movements and other behaviors. For example, you can adjust the tentacle's speed, acceleration, and other parameters to suit your preferences or the specific task at hand.
 
+
+##How to use the webapp
+<img width="1217" alt="image" src="https://user-images.githubusercontent.com/92636294/206807854-56e47ee8-4264-4079-a11c-403b0acd2101.png">
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/92636294/206808146-78895b1b-c9ee-459a-8864-65bc11f05ccd.png">
+<img width="520" alt="image" src="https://user-images.githubusercontent.com/92636294/206808250-4ac8ef7a-08c3-4374-86b6-45a4f0ef6ee0.png">
+
+<img width="1864" alt="image" src="https://user-images.githubusercontent.com/92636294/206807668-fd33dd0f-c7ba-47db-9c8d-ac70a3a97554.png">
+
+
 # Complex Outcome
 - The control of the motors using the AccelStepper and MultiStepper libraries. These libraries provide a high degree of control over the motors, but they can be challenging to use and require careful coding to ensure that the movements of the arm are smooth and accurate.
 
